@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import {Link,Navigate} from 'react-router-dom';
 import unknown from './DP/unknown.png'; // Adjust the path as needed
 export default class Home extends Component {
- 
   constructor(props){
    super();
   this.state={
     isfacebook:false,
-    isGoogle:false
+    isGoogle:false,
+    isNavigate:false
   }
   }
   facebook1=()=>{
@@ -31,12 +31,11 @@ export default class Home extends Component {
   })
  }
   cong = () => {
-    // let chang = document.getElementById('welcome');
     let colorRed = document.getElementById('colorRed');
     let disappear = document.getElementById('disappear');
     let colorRed1 = document.getElementById('colorRed1');
     let inputVal = document.getElementById('email').value;
-     let inputVall = inputVal.length;
+    let inputVall = inputVal.length;
     if(inputVall <= 0){
     colorRed.style.color='red';
     colorRed.style.fontSize='15px';
@@ -46,11 +45,15 @@ export default class Home extends Component {
     else{
       colorRed.style.color='black';
       disappear.style.display='none';
+      this.setState({isNavigate:true});
     }
   }
   render() {
+    if(this.state.isNavigate){
+      return <Navigate to='/Login1' />;
+    }
+    
   const facebook ={
-  
      width: '60%',
       height: '4.5vh',
        backgroundColor:this.state.isfacebook?'blue':'white',
@@ -60,8 +63,7 @@ export default class Home extends Component {
        border:'1px solid blue' ,
        color:this.state.isfacebook?'white':'blue'
       }
-      const google={
-      
+      const google={    
          width: '60%',
           height: '4.5vh',
            display:"flex",
@@ -71,7 +73,9 @@ export default class Home extends Component {
            backgroundColor:this.state.isGoogle?'blue':'white',
            border:'1px solid blue' 
       }
-    return (
+
+
+    return (  
       <div className='mother'>
         <header style={{ backgroundColor: 'white', height: '40px', width: '100%', display: 'flex', alignItems: 'center' }}>
         <Link to="/" style={{textDecoration:'none'}}> <h4 className='logo1' >Mr.Travel</h4></Link> 

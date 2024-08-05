@@ -359,7 +359,8 @@ componentDidMount(){
     }
     const buttonF3 = {
       cursor: 'pointer',
-      color: 'white',
+      color: 'white',            
+
       padding: '0px 14px 0px 14px',
       fontSize: '10px',
       backgroundColor: this.state.isHovered3 ? ' #000000' : '#080402',
@@ -443,7 +444,8 @@ componentDidMount(){
       transform: this.state.isRotate2 ? 'rotate(180deg)' : 'rotate(0deg)'
     }
 
-    return (
+    return (            
+
       <>
   
         <div className="container">
@@ -464,10 +466,10 @@ componentDidMount(){
             <h4 className='logo'>Mr.travel</h4>
             <div className='ulButOne'>
               <ul >
-                <li><a href="#">Discover      </a>  </li>
-                <li><a href="#">Community     </a> </li>
-                <li><a href="#">Special Deals </a> </li>
-                <li><a href="#">About Us      </a> </li>
+                <li><a href="#">Discover</a> </li>
+                <li><a href="#">Community</a> </li>
+                <li><a href="#">Special Deals</a> </li>
+                <li><a href="#">About Us</a> </li>
               </ul>
               <div style={{ width: '60px',backgroundColor:'whitesmoke',display:'flex',alignItems:'center',justifyContent:'flex-end' }} 
                   >
@@ -481,8 +483,8 @@ componentDidMount(){
           </nav>
 
           <div style={appear} onMouseLeave={this.handleMouseLeave}>
-          <Link to='/home' style={{textDecoration:'none',color:'black'}}><div style={{width:'86%',height:'auto',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',backgroundColor:'green',padding:'7px'}}>Login</div></Link>  
-          <Link to='/home' style={{textDecoration:'none',color:'black'}}><div style={{cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',backgroundColor:'yellow',padding:'5px'}}>Sign Up</div>  </Link>  
+          <Link to='/Login' style={{textDecoration:'none',color:'black'}}><div style={{width:'86%',height:'auto',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',backgroundColor:'green',padding:'7px'}}>Login</div></Link>  
+          <Link to='/Login' style={{textDecoration:'none',color:'black'}}><div style={{cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',flexDirection:'column',backgroundColor:'yellow',padding:'5px'}}>Sign Up</div>  </Link>  
           </div>
           <div className='imgFit' >
             <div className='item1' style={item1}>
